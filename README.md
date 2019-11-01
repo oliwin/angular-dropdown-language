@@ -1,5 +1,9 @@
 # Компонент DropDownLanguage
 
+# Требования
+
+https://docs.google.com/document/d/1D8GIYCEhw5TKLFep6r32y2gYqAxSXMbgkZ4wosH-p58/edit
+
 # Использование компонента DropDownLanguage
 
 - Не забудьте сначала сделать npm install, потом npm start (ng serve)
