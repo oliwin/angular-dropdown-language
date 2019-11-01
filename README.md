@@ -1,9 +1,6 @@
-Компонент DropDownLanguage
+# Компонент DropDownLanguage
 
-Ссылка на скачивание проекта целиком и компонента в отдельности:
-https://cloud.mail.ru/public/vLtR/4KhnZuRZV
-
-Использование компонента DropDownLanguage
+# Использование компонента DropDownLanguage
 
 Компонент лежит в корне проекта в папке /dropdown
 Имеет зависимость от директивы ClickOutsideDirective, которая лежит в папке /directives
@@ -11,7 +8,7 @@ https://cloud.mail.ru/public/vLtR/4KhnZuRZV
 Не забудьте добавить в app.module -> imports:[] зависимость LanguageModule
 
 
-Контакты
+# Контакты
 
 Олег Пономарчук
 ponomarchukov@gmail.com
