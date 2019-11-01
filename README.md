@@ -2,10 +2,11 @@
 
 # Использование компонента DropDownLanguage
 
-Компонент лежит в корне проекта в папке /dropdown
-Имеет зависимость от директивы ClickOutsideDirective, которая лежит в папке /directives
-Компонент вызывается из главного компонента (каркаса) app.component.ts
-Не забудьте добавить в app.module -> imports:[] зависимость LanguageModule
+- Не забудьте сначала сделать npm install, потом npm start (ng serve)
+- Компонент лежит в корне проекта в папке /dropdown
+- Имеет зависимость от директивы ClickOutsideDirective, которая лежит в папке /directives
+- Компонент вызывается из главного компонента (каркаса) app.component.ts
+- Не забудьте добавить в app.module -> imports:[] зависимость LanguageModule
 
 
 # Контакты
