@@ -1,0 +1,68 @@
+<div class="search">
+  <div class="search_block">
+    <input
+      #searchInput
+      type="text"
+      placeholder="Please select language..."
+      [readOnly]="!_openSearchContent"
+      [(ngModel)]="searchModel"
+      (click)="openSearchContent()"
+      (ngModelChange)="searchModeChanged($event)"
+    />
+    <div class="search_block_buttons">
+      <div
+        *ngIf="showCloseButton()"
+        class="search_block_close"
+        (click)="resetDropDown()"
+      ></div>
+      <div
+        class="search_block_arrowdown"
+        (click)="openSearchContent()"
+        [ngClass]="{
+          open: _openSearchContent,
+          close: !_openSearchContent
+        }"
+      ></div>
+    </div>
+  </div>
+
+  <!-- Content result -->
+
+  <div
+    class="search_content"
+    *ngIf="_openSearchContent"
+    (clickOutside)="_openSearchContent = false"
+  >
+    <div *ngFor="let group of filteredObject">
+      <div class="dropmenu_block" *ngIf="group.languages.length">
+        <div class="dropmenu_block_header">
+          {{ group.name }}
+        </div>
+        <div class="dropmenu_block_items">
+          <div
+            class="dropmenu_block_item"
+            (click)="select(language)"
+            [ngClass]="{
+              selected: isSelected(language)
+            }"
+            *ngFor="let language of group.languages; trackBy: trackByFn"
+          >
+            {{ language.Name }}
+            <span class="dropmenu_block_item_code">{{ language.Code }}</span>
+            <span
+              class="dropmenu_block_item_mapped"
+              *ngIf="isHighlighted(language)"
+              >(mapped)</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="!foundResult()">
+      <div class="dropmenu_block_nodata">
+        По запросу {{ searchQuery }} ничего не найдено...
+      </div>
+    </div>
+  </div>
+</div>
